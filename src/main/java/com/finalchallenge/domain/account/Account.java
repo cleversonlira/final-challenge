@@ -2,7 +2,6 @@
 package com.finalchallenge.domain.account;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.finalchallenge.domain.card.Card;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

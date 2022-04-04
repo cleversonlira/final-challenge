@@ -47,6 +47,7 @@ public class CardService {
     public ResponseEntity<?> deleteById(Integer id) {
         Optional<Card> cardOp = repository.findById(id);
         if (cardOp.isPresent()) {
+            validateCardWithAccount(cardOp);
             repository.deleteById(id);
             return ResponseEntity.noContent().build();
         }
@@ -65,5 +66,10 @@ public class CardService {
 
     private void validateAccount(CardDto dto, Optional<Account> accountOp) {
         if (accountOp.isEmpty()) throw new IllegalArgumentException("Account with id: " + dto.getAccountId() + " not found!");
+    }
+
+    private void validateCardWithAccount(Optional<Card> cardOp) {
+        Account account = cardOp.get().getAccount();
+        if (account != null) throw new IllegalArgumentException("This card cannot be deleted because it has associated account!");
     }
 }
