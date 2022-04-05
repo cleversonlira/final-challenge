@@ -17,6 +17,8 @@ public class Card {
 
     private String name;
     private String flag;
+
+    @Column(unique = true)
     private String number;
 
     @Column(name = "digit_code")

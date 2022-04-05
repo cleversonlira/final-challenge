@@ -23,13 +23,13 @@ public class Account {
     @Column(name = "agency_code")
     private String agencyCode;
 
-    @Column(name = "account_code")
+    @Column(name = "account_code", unique = true)
     private String accountCode;
 
     @Column(name = "digit_verification")
     private String digitVerification;
 
-    @Column(name = "register_id")
+    @Column(name = "register_id", unique = true)
     private String registerId;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
