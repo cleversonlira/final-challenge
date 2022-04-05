@@ -1,8 +1,8 @@
 package com.finalchallenge.application.resources;
 
-import com.finalchallenge.application.resources.dto.account.AccountDTO;
-import com.finalchallenge.application.resources.dto.account.AccountResponseDTO;
-import com.finalchallenge.application.services.AccountService;
+import com.finalchallenge.application.resources.dto.card.TypeCardResponseDTO;
+import com.finalchallenge.application.resources.dto.card.TypeCardDTO;
+import com.finalchallenge.application.services.TypeCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,24 +12,24 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/account")
-public class AccountResource {
+@RequestMapping("/type-card")
+public class TypeCardResource {
 
     @Autowired
-    AccountService service;
+    TypeCardService service;
 
     @GetMapping
-    public ResponseEntity<List<AccountResponseDTO>> getAll() {
+    public ResponseEntity<List<TypeCardResponseDTO>> getAll() {
         return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AccountResponseDTO> geById(@PathVariable Integer id) {
+    public ResponseEntity<TypeCardResponseDTO> geById(@PathVariable Integer id) {
         return service.getById(id);
     }
 
     @PostMapping
-    public ResponseEntity<AccountResponseDTO> save(@RequestBody @Valid AccountDTO dto, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<TypeCardResponseDTO> save(@RequestBody @Valid TypeCardDTO dto, UriComponentsBuilder uriBuilder) {
         return service.save(dto, uriBuilder);
     }
 
@@ -39,7 +39,7 @@ public class AccountResource {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<AccountResponseDTO> update(@PathVariable Integer id, @RequestBody @Valid AccountDTO dto) {
+    public ResponseEntity<TypeCardResponseDTO> update(@PathVariable Integer id, @RequestBody @Valid TypeCardDTO dto) {
         return service.update(id, dto);
     }
 

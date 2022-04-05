@@ -1,7 +1,7 @@
 package com.finalchallenge.application.services;
 
-import com.finalchallenge.application.resources.dto.AccountDTO;
-import com.finalchallenge.application.resources.dto.AccountResponseDTO;
+import com.finalchallenge.application.resources.dto.account.AccountDTO;
+import com.finalchallenge.application.resources.dto.account.AccountResponseDTO;
 import com.finalchallenge.domain.account.Account;
 import com.finalchallenge.infrastructure.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;

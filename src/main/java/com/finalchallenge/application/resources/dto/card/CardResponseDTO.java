@@ -1,4 +1,4 @@
-package com.finalchallenge.application.resources.dto;
+package com.finalchallenge.application.resources.dto.card;
 
 import com.finalchallenge.domain.account.Account;
 import com.finalchallenge.domain.card.Card;

@@ -1,7 +1,7 @@
 package com.finalchallenge.application.resources;
 
-import com.finalchallenge.application.resources.dto.CardDto;
-import com.finalchallenge.application.resources.dto.CardResponseDTO;
+import com.finalchallenge.application.resources.dto.card.CardDto;
+import com.finalchallenge.application.resources.dto.card.CardResponseDTO;
 import com.finalchallenge.application.services.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

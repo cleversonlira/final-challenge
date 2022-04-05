@@ -1,4 +1,4 @@
-package com.finalchallenge.application.resources.dto;
+package com.finalchallenge.application.resources.dto.account;
 
 import com.finalchallenge.domain.account.Account;
 import lombok.Setter;

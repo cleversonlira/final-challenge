@@ -1,16 +1,14 @@
-package com.finalchallenge.application.resources.dto;
+package com.finalchallenge.application.resources.dto.card;
 
 import com.finalchallenge.domain.account.Account;
 import com.finalchallenge.domain.card.Card;
 import com.finalchallenge.domain.card.Flag;
 import com.finalchallenge.domain.card.TypeCard;
-import com.finalchallenge.domain.card.TypeCardEnum;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
@@ -35,7 +33,7 @@ public class CardDto {
                 this.digitCode,
                 this.limitBalance,
                 new Account(accountId),
-                new TypeCard(TypeCardEnum.valueOf(typeCard))
+                new TypeCard(typeCard)
         );
     }
 
@@ -45,6 +43,6 @@ public class CardDto {
         card.setNumber(this.number);
         card.setDigitCode(this.digitCode);
         card.setLimitBalance(this.limitBalance);
-        card.setTypeCard(new TypeCard(TypeCardEnum.valueOf(typeCard)));
+        card.setTypeCard(new TypeCard(typeCard));
     }
 }

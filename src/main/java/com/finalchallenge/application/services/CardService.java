@@ -1,7 +1,7 @@
 package com.finalchallenge.application.services;
 
-import com.finalchallenge.application.resources.dto.CardDto;
-import com.finalchallenge.application.resources.dto.CardResponseDTO;
+import com.finalchallenge.application.resources.dto.card.CardDto;
+import com.finalchallenge.application.resources.dto.card.CardResponseDTO;
 import com.finalchallenge.domain.account.Account;
 import com.finalchallenge.domain.card.Card;
 import com.finalchallenge.infrastructure.repository.AccountRepository;

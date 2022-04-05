@@ -9,23 +9,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity @NoArgsConstructor @Getter
+@Entity @NoArgsConstructor @Getter @Setter
 public class TypeCard {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Setter
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
-    public TypeCard(TypeCardEnum name) {
-        this.id = name.ordinal() + 1;
-        setName(name);
-    }
-
-    public TypeCardEnum getName() {
-        return TypeCardEnum.valueOf(name.toUpperCase());
-    }
-
-    public void setName(TypeCardEnum name) {
-        this.name = name.toString();
+    public TypeCard(String name) {
+        this.name = name;
     }
 }
